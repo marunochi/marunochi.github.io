@@ -1,566 +1,883 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Tracker</title>
+    <title>Charte Graphique - Atticus Chat</title>
     <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --light: #ecf0f1;
-            --danger: #e74c3c;
-            --success: #2ecc71;
-            --dark: #2c3e50;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
+        * {
             margin: 0;
-            padding: 20px;
-            background: #f5f6fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .category {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            min-height: 400px;
-        }
-
-        .job-card {
-            background: var(--light);
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            position: relative;
-            border-left: 4px solid var(--secondary);
-            transition: transform 0.2s;
-        }
-
-        .job-card:hover {
-            transform: translateY(-2px);
-        }
-
-        .job-card.urgent {
-            border-color: var(--danger);
-        }
-
-        .btn {
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: var(--secondary);
-            color: white;
-        }
-
-        .btn-success {
-            background: var(--success);
-            color: white;
-        }
-
-        .btn-danger {
-            background: var(--danger);
-            color: white;
-        }
-
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-        }
-
-        .compact-modal .modal-content {
-            max-width: 600px;
-            max-height: 80vh;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 0;
             box-sizing: border-box;
-            margin-top: 5px;
         }
 
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
+```
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f8f9fa;
+    }
 
-        .badge {
-            font-size: 0.8em;
-            padding: 3px 8px;
-            border-radius: 10px;
-            background: #ddd;
-        }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        .urgent-badge {
-            background: var(--danger);
-            color: white;
-        }
+    .header {
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-radius: 16px;
+    }
 
-        .prompt-content {
-            white-space: pre-wrap;
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-            max-height: 400px;
-            overflow-y: auto;
-            font-family: monospace;
-            font-size: 0.9em;
-        }
+    .header h1 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 16px;
+        background: linear-gradient(135deg, #ffffff, #e2e8f0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
 
-        .ai-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+    .section {
+        background: white;
+        border-radius: 16px;
+        padding: 40px;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border: 1px solid #e5e7eb;
+    }
 
-        .service-button {
-            background: #4a5568;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
+    .section h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        background: linear-gradient(135deg, #2563eb, #10b981);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
 
-        .service-button.chatgpt {
-            background: #10a37f;
-        }
+    .section h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #1f2937;
+    }
 
-        .service-button.claude {
-            background: #e64c1e;
-        }
+    .section h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #374151;
+    }
 
-        .status-controls {
-            display: flex;
-            gap: 5px;
-            margin-top: 10px;
-        }
+    .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        margin: 24px 0;
+    }
 
-        .drag-handle {
-            cursor: move;
-            opacity: 0.6;
-            margin-right: 10px;
+    .color-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .color-sample {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .color-info {
+        padding: 16px;
+        background: #f9fafb;
+    }
+
+    .color-info h4 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #1f2937;
+    }
+
+    .color-values {
+        font-size: 12px;
+        color: #6b7280;
+        font-family: 'Courier New', monospace;
+    }
+
+    .color-values div {
+        margin: 4px 0;
+    }
+
+    .typography-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 32px;
+        margin: 24px 0;
+    }
+
+    .type-sample {
+        padding: 24px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: #fafbfc;
+    }
+
+    .type-sample h4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #6b7280;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        margin: 24px 0;
+    }
+
+    .logo-sample {
+        padding: 40px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        text-align: center;
+        background: #fafbfc;
+    }
+
+    .logo-dark {
+        background: linear-gradient(135deg, #1f2937, #374151);
+    }
+
+    .logo-sample img {
+        max-height: 100px;
+        width: auto;
+        margin-bottom: 16px;
+    }
+
+    .gradient-sample {
+        height: 80px;
+        border-radius: 8px;
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .component-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+        margin: 24px 0;
+    }
+
+    .component-sample {
+        padding: 24px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: #fafbfc;
+    }
+
+    .btn-sample {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 8px 8px 8px 0;
+        transition: all 0.2s ease;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        color: white;
+    }
+
+    .btn-secondary {
+        background: linear-gradient(135deg, #10b981, #34d399);
+        color: white;
+    }
+
+    .btn-tertiary {
+        background: linear-gradient(135deg, #f59e0b, #fbbf24);
+        color: #1f2937;
+    }
+
+    .glass-sample {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 16px;
+        padding: 24px;
+        margin: 16px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .glass-sample::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(ellipse at top, #0f1419, #1a2332);
+        z-index: -1;
+    }
+
+    .glass-sample * {
+        color: white;
+    }
+
+    .spacing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+    }
+
+    .spacing-sample {
+        text-align: center;
+        padding: 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: #f9fafb;
+    }
+
+    .spacing-visual {
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+        border-radius: 4px;
+        margin: 8px 0;
+        position: relative;
+    }
+
+    .download-section {
+        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        margin: 32px 0;
+    }
+
+    .download-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        color: white;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    code {
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: 'Courier New', monospace;
+        font-size: 13px;
+        color: #1e40af;
+    }
+
+    .usage-examples {
+        background: #f8fafc;
+        border-left: 4px solid #2563eb;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 0 8px 8px 0;
+    }
+
+    @media (max-width: 768px) {
+        .header h1 {
+            font-size: 36px;
         }
-    </style>
+        
+        .section {
+            padding: 24px;
+        }
+        
+        .color-grid,
+        .typography-grid,
+        .logo-grid,
+        .component-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Job Application Tracker 💼</h1>
-            <div class="action-buttons">
-                <button class="btn btn-primary" onclick="showModal('addJobModal')">
-                    <span>+</span> Add Job
-                </button>
-                <button class="btn btn-success" onclick="exportToExcel()">
-                    📁 Export CSV
-                </button>
-                <button class="btn" onclick="showModal('userInfoModal')">
-                    👤 Profile
-                </button>
+            <h1>Charte Graphique</h1>
+            <h2 style="font-size: 24px; font-weight: 400; margin: 0;">Atticus Chat - Assistant IA Patrimonial</h2>
+            <p style="margin-top: 16px; opacity: 0.9;">Guide complet d'utilisation de l'identité visuelle</p>
+        </div>
+
+```
+    <!-- Logo & Identité -->
+    <div class="section">
+        <h2>🎯 Logo & Identité Visuelle</h2>
+        
+        <h3>Versions du Logo</h3>
+        <div class="logo-grid">
+            <div class="logo-sample">
+                <img src="https://atticuschat.b-cdn.net/logo%20compressed.png" alt="Logo Atticus Chat">
+                <h4>Logo Principal</h4>
+                <p><code>logo-compressed.png</code></p>
+                <p>Usage: Fonds colorés, impression</p>
+            </div>
+            <div class="logo-sample logo-dark">
+                <img src="https://atticuschat.b-cdn.net/white%20transparent.png" alt="Logo Blanc Atticus Chat">
+                <h4>Logo Blanc</h4>
+                <p style="color: #e5e7eb;"><code>white-transparent.png</code></p>
+                <p style="color: #e5e7eb;">Usage: Fonds sombres, interfaces</p>
+            </div>
+            <div class="logo-sample logo-dark">
+                <img src="https://atticuschat.b-cdn.net/white%20transaprent%20with%20slogan.png" alt="Logo avec slogan">
+                <h4>Logo avec Slogan</h4>
+                <p style="color: #e5e7eb;"><code>white-with-slogan.png</code></p>
+                <p style="color: #e5e7eb;">Usage: Headers, footers</p>
             </div>
         </div>
 
-        <!-- User Info Modal -->
-          <div id="userInfoModal" class="modal">
-            <div class="modal-content">
-                <h2>Your Profile</h2>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="userName" placeholder="John Doe">
+        <div class="usage-examples">
+            <h4>📐 Règles d'usage du logo</h4>
+            <ul>
+                <li><strong>Taille minimale:</strong> 70px de hauteur (mobile), 90px (desktop)</li>
+                <li><strong>Zone de protection:</strong> Équivalent à la hauteur du logo</li>
+                <li><strong>Ratio:</strong> Conserver les proportions originales</li>
+                <li><strong>Positionnement:</strong> Alignement à gauche recommandé</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Palette de Couleurs -->
+    <div class="section">
+        <h2>🎨 Palette de Couleurs</h2>
+        
+        <h3>Couleurs Principales</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-sample" style="background: #2563eb;">
+                    Primary Blue
                 </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="userEmail" placeholder="john@example.com">
+                <div class="color-info">
+                    <h4>Bleu Principal</h4>
+                    <div class="color-values">
+                        <div><strong>HEX:</strong> #2563eb</div>
+                        <div><strong>RGB:</strong> 37, 99, 235</div>
+                        <div><strong>HSL:</strong> 217, 83%, 53%</div>
+                        <div><strong>CSS:</strong> var(--primary)</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Key Skills or CV</label>
-                    <textarea id="userSkills" placeholder="Project management, React, Python..."></textarea>
+            </div>
+
+            <div class="color-card">
+                <div class="color-sample" style="background: #3b82f6;">
+                    Primary Light
                 </div>
-                <div class="action-buttons">
-                    <button class="btn btn-primary" onclick="saveUserInfo()">Save</button>
-                    <button class="btn btn-danger" onclick="deleteUserInfo()">Clear Profile</button>
-                    <button class="btn" onclick="closeModal('userInfoModal')">Cancel</button>
+                <div class="color-info">
+                    <h4>Bleu Clair</h4>
+                    <div class="color-values">
+                        <div><strong>HEX:</strong> #3b82f6</div>
+                        <div><strong>RGB:</strong> 59, 130, 246</div>
+                        <div><strong>HSL:</strong> 213, 91%, 60%</div>
+                        <div><strong>CSS:</strong> var(--primary-light)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card">
+                <div class="color-sample" style="background: #10b981;">
+                    Secondary Green
+                </div>
+                <div class="color-info">
+                    <h4>Vert Secondaire</h4>
+                    <div class="color-values">
+                        <div><strong>HEX:</strong> #10b981</div>
+                        <div><strong>RGB:</strong> 16, 185, 129</div>
+                        <div><strong>HSL:</strong> 160, 84%, 39%</div>
+                        <div><strong>CSS:</strong> var(--secondary)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card">
+                <div class="color-sample" style="background: #f59e0b; color: #1f2937;">
+                    Tertiary Orange
+                </div>
+                <div class="color-info">
+                    <h4>Orange Tertiaire</h4>
+                    <div class="color-values">
+                        <div><strong>HEX:</strong> #f59e0b</div>
+                        <div><strong>RGB:</strong> 245, 158, 11</div>
+                        <div><strong>HSL:</strong> 38, 92%, 50%</div>
+                        <div><strong>CSS:</strong> var(--tertiary)</div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <h3>Couleurs de Texte</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-sample" style="background: #f3f4f6; color: #1f2937;">
+                    Text Primary
+                </div>
+                <div class="color-info">
+                    <h4>Texte Principal</h4>
+                    <div class="color-values">
+                        <div><strong>HEX:</strong> #f3f4f6</div>
+                        <div><strong>Usage:</strong> Texte principal sur fonds sombres</div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Add Job Modal -->
-        <div id="addJobModal" class="modal">
-            <div class="modal-content">
-                <h2>Add New Job</h2>
-                <div class="form-group">
-                    <label>Company</label>
-                    <input type="text" id="company" placeholder="Google">
+            <div class="color-card">
+                <div class="color-sample" style="background: #9ca3af;">
+                    Text Secondary
                 </div>
-                <div class="form-group">
-                    <label>Position</label>
-                    <input type="text" id="position" placeholder="Software Engineer">
-                </div>
-                <div class="form-group">
-                    <label>Deadline</label>
-                    <input type="date" id="deadline">
-                </div>
-                <div class="form-group">
-                    <label>Job Description</label>
-                    <textarea id="description" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Requirements</label>
-                    <textarea id="requirements" rows="3"></textarea>
-                </div>
-                <div class="action-buttons">
-                    <button class="btn btn-primary" onclick="addJob()">Add Job</button>
-                    <button class="btn" onclick="closeModal('addJobModal')">Cancel</button>
+                <div class="color-info">
+                    <h4>Texte Secondaire</h4>
+                    <div class="color-values">
+                        <div><strong>HEX:</strong> #9ca3af</div>
+                        <div><strong>Usage:</strong> Sous-titres, descriptions</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- AI Prompt Modal -->
-        <div id="aiPromptModal" class="modal compact-modal">
-            <div class="modal-content">
-                <h2>AI Cover Letter Assistant 🤖</h2>
-                <div class="prompt-content" id="aiPromptText"></div>
-                <div class="ai-actions">
-                    <button class="btn btn-success" onclick="copyPrompt()">
-                        📋 Copy Prompt
-                    </button>
-                    <button class="btn service-button chatgpt" onclick="window.open('https://chat.openai.com', '_blank')">
-                        🤖 ChatGPT
-                    </button>
-                    <button class="btn service-button claude" onclick="window.open('https://claude.ai', '_blank')">
-                        🧠 Claude
-                    </button>
-                    <button class="btn" onclick="closeModal('aiPromptModal')">
-                        ✕ Close
-                    </button>
-                </div>
-            </div>
+        <h3>Dégradés Signature</h3>
+        <div class="gradient-sample" style="background: linear-gradient(135deg, #2563eb, #3b82f6);">
+            Primary Gradient
+        </div>
+        <code>background: linear-gradient(135deg, #2563eb, #3b82f6);</code>
+
+        <div class="gradient-sample" style="background: linear-gradient(135deg, #10b981, #34d399);">
+            Secondary Gradient  
+        </div>
+        <code>background: linear-gradient(135deg, #10b981, #34d399);</code>
+
+        <div class="gradient-sample" style="background: linear-gradient(135deg, #60a5fa, #34d399, #fbbf24);">
+            Brand Gradient (Titres)
+        </div>
+        <code>background: linear-gradient(135deg, #60a5fa, #34d399, #fbbf24);</code>
+    </div>
+
+    <!-- Typographie -->
+    <div class="section">
+        <h2>📝 Typographie</h2>
+        
+        <h3>Police Principale</h3>
+        <div class="usage-examples">
+            <h4>Font Stack Complet</h4>
+            <code>font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;</code>
+            <p><strong>Justification:</strong> Police système optimisée, lisible et moderne sur tous les appareils</p>
         </div>
 
-        <!-- Job Categories Grid -->
-        <div class="grid">
-            <div class="category">
-                <h2>🕒 Not Applied</h2>
-                <div id="notApplied"></div>
+        <div class="typography-grid">
+            <div class="type-sample">
+                <h4>H1 - Titre Principal</h4>
+                <div style="font-size: 48px; font-weight: 800; line-height: 1.2; background: linear-gradient(135deg, #2563eb, #10b981); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;">
+                    L'Assistant IA
+                </div>
+                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
+                    <strong>Taille:</strong> 48px (desktop), 36px (mobile)<br>
+                    <strong>Poids:</strong> 800<br>
+                    <strong>Ligne:</strong> 1.2<br>
+                    <strong>Gradient:</strong> Primary → Secondary
+                </p>
             </div>
-            <div class="category">
-                <h2>⏳ In Progress</h2>
-                <div id="inProgress"></div>
+
+            <div class="type-sample">
+                <h4>H2 - Titre Section</h4>
+                <div style="font-size: 42px; font-weight: 700; line-height: 1.3; background: linear-gradient(135deg, #3b82f6, #10b981); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;">
+                    Fonctionnalités
+                </div>
+                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
+                    <strong>Taille:</strong> 42px (desktop), 32px (mobile)<br>
+                    <strong>Poids:</strong> 700<br>
+                    <strong>Ligne:</strong> 1.3
+                </p>
             </div>
-            <div class="category">
-                <h2>✅ Applied</h2>
-                <div id="applied"></div>
+
+            <div class="type-sample">
+                <h4>H3 - Sous-titre</h4>
+                <div style="font-size: 24px; font-weight: 600; line-height: 1.4; color: #1f2937;">
+                    Gestion de Patrimoine
+                </div>
+                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
+                    <strong>Taille:</strong> 24px<br>
+                    <strong>Poids:</strong> 600<br>
+                    <strong>Couleur:</strong> #1f2937
+                </p>
             </div>
-            <div class="category">
-                <h2>🎤 Interviewed</h2>
-                <div id="interviewed"></div>
+
+            <div class="type-sample">
+                <h4>Body - Texte Courant</h4>
+                <div style="font-size: 16px; font-weight: 400; line-height: 1.6; color: #374151;">
+                    Votre assistant expert en gestion de patrimoine et investissement. Posez vos questions sur les placements, la fiscalité et la préparation retraite.
+                </div>
+                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
+                    <strong>Taille:</strong> 16px<br>
+                    <strong>Poids:</strong> 400<br>
+                    <strong>Ligne:</strong> 1.6<br>
+                    <strong>Couleur:</strong> #374151
+                </p>
             </div>
         </div>
     </div>
 
-    <script>
-        // Data Management
-        let jobs = JSON.parse(localStorage.getItem('jobs')) || [];
-        let userInfo = JSON.parse(localStorage.getItem('userInfo')) || {};
-
-        // Modal Controls
-        function showModal(id) {
-            if (id === 'userInfoModal') {
-                // Populate fields with current info
-                document.getElementById('userName').value = userInfo.name || '';
-                document.getElementById('userEmail').value = userInfo.email || '';
-                document.getElementById('userSkills').value = userInfo.skills || '';
-            }
-            document.getElementById(id).style.display = 'flex';
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
+    <!-- Effets Glassmorphism -->
+    <div class="section">
+        <h2>✨ Effets Glassmorphism</h2>
         
+        <h3>Effet Verre Signature</h3>
+        <div class="glass-sample">
+            <h4>Composant Glassmorphism</h4>
+            <p>Cet effet donne une sensation de profondeur et de modernité à l'interface.</p>
+            <div style="margin-top: 16px;">
+                <code style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                    background: rgba(255, 255, 255, 0.08);<br>
+                    backdrop-filter: blur(12px);<br>
+                    border: 1px solid rgba(255, 255, 255, 0.18);<br>
+                    border-radius: 16px;
+                </code>
+            </div>
+        </div>
 
-        // User Info Handling
-        function saveUserInfo() {
-            userInfo = {
-                name: document.getElementById('userName').value,
-                email: document.getElementById('userEmail').value,
-                skills: document.getElementById('userSkills').value
-            };
-            localStorage.setItem('userInfo', JSON.stringify(userInfo));
-            alert('Profile updated successfully!');
-            closeModal('userInfoModal');
-        }
+        <div class="usage-examples">
+            <h4>🔧 Variables CSS Glassmorphism</h4>
+            <div style="font-family: monospace; font-size: 14px; line-height: 1.8;">
+                --glass-bg: rgba(255, 255, 255, 0.08);<br>
+                --glass-border: rgba(255, 255, 255, 0.18);<br>
+                --card-bg: rgba(26, 35, 50, 0.7);<br>
+                --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            </div>
+        </div>
+    </div>
 
-         function deleteUserInfo() {
-            if (confirm('Are you sure you want to delete all profile information?')) {
-                localStorage.removeItem('userInfo');
-                userInfo = {};
-                closeModal('userInfoModal');
-                alert('Profile information cleared!');
-            }
-        }
+    <!-- Composants UI -->
+    <div class="section">
+        <h2>🔧 Composants UI</h2>
+        
+        <h3>Boutons</h3>
+        <div class="component-grid">
+            <div class="component-sample">
+                <h4>Bouton Principal</h4>
+                <button class="btn-sample btn-primary">Demander l'accès Beta</button>
+                <div style="margin-top: 12px; font-size: 12px; font-family: monospace;">
+                    background: linear-gradient(135deg, #2563eb, #3b82f6);<br>
+                    padding: 18px 38px;<br>
+                    border-radius: 12px;
+                </div>
+            </div>
 
-        // Job Management
-        function addJob() {
-            const job = {
-                id: Date.now(),
-                company: document.getElementById('company').value,
-                position: document.getElementById('position').value,
-                deadline: document.getElementById('deadline').value,
-                description: document.getElementById('description').value,
-                requirements: document.getElementById('requirements').value,
-                status: 'notApplied',
-                added: new Date().toISOString()
-            };
+            <div class="component-sample">
+                <h4>Bouton Secondaire</h4>
+                <button class="btn-sample btn-secondary">Accéder à l'app</button>
+                <div style="margin-top: 12px; font-size: 12px; font-family: monospace;">
+                    background: linear-gradient(135deg, #10b981, #34d399);<br>
+                    États: hover, active, disabled
+                </div>
+            </div>
+
+            <div class="component-sample">
+                <h4>Bouton d'Action</h4>
+                <button class="btn-sample btn-tertiary">Configuration</button>
+                <div style="margin-top: 12px; font-size: 12px; font-family: monospace;">
+                    background: linear-gradient(135deg, #f59e0b, #fbbf24);<br>
+                    Usage: Actions secondaires
+                </div>
+            </div>
+        </div>
+
+        <h3>Espacement & Grille</h3>
+        <div class="spacing-grid">
+            <div class="spacing-sample">
+                <div class="spacing-visual" style="height: 8px;"></div>
+                <strong>8px</strong><br>
+                <small>Micro-espacement</small>
+            </div>
+            <div class="spacing-sample">
+                <div class="spacing-visual" style="height: 16px;"></div>
+                <strong>16px</strong><br>
+                <small>Petit espacement</small>
+            </div>
+            <div class="spacing-sample">
+                <div class="spacing-visual" style="height: 24px;"></div>
+                <strong>24px</strong><br>
+                <small>Espacement moyen</small>
+            </div>
+            <div class="spacing-sample">
+                <div class="spacing-visual" style="height: 32px;"></div>
+                <strong>32px</strong><br>
+                <small>Grand espacement</small>
+            </div>
+            <div class="spacing-sample">
+                <div class="spacing-visual" style="height: 48px;"></div>
+                <strong>48px</strong><br>
+                <small>Très grand</small>
+            </div>
+            <div class="spacing-sample">
+                <div class="spacing-visual" style="height: 80px;"></div>
+                <strong>80px</strong><br>
+                <small>Section</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Iconographie -->
+    <div class="section">
+        <h2>📱 Iconographie</h2>
+        
+        <h3>Font Awesome 6.4.0</h3>
+        <div class="component-grid">
+            <div class="component-sample" style="text-align: center;">
+                <div style="font-size: 48px; color: #2563eb; margin: 16px 0;">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h4>Intelligence</h4>
+                <code>fas fa-brain</code>
+            </div>
             
-            jobs.push(job);
-            localStorage.setItem('jobs', JSON.stringify(jobs));
-            renderJobs();
-            closeModal('addJobModal');
-            clearJobForm();
-        }
+            <div class="component-sample" style="text-align: center;">
+                <div style="font-size: 48px; color: #10b981; margin: 16px 0;">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Analytique</h4>
+                <code>fas fa-chart-line</code>
+            </div>
+            
+            <div class="component-sample" style="text-align: center;">
+                <div style="font-size: 48px; color: #f59e0b; margin: 16px 0;">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Sécurité</h4>
+                <code>fas fa-shield-alt</code>
+            </div>
+            
+            <div class="component-sample" style="text-align: center;">
+                <div style="font-size: 48px; color: #6366f1; margin: 16px 0;">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h4>Conseil</h4>
+                <code>fas fa-user-tie</code>
+            </div>
+        </div>
 
-        function clearJobForm() {
-            document.getElementById('company').value = '';
-            document.getElementById('position').value = '';
-            document.getElementById('deadline').value = '';
-            document.getElementById('description').value = '';
-            document.getElementById('requirements').value = '';
-        }
+        <div class="usage-examples">
+            <h4>📐 Règles d'usage des icônes</h4>
+            <ul>
+                <li><strong>Tailles standard:</strong> 16px, 24px, 32px, 48px</li>
+                <li><strong>Couleurs:</strong> Utiliser la palette brand</li>
+                <li><strong>Style:</strong> Font Awesome Solid (fas) prioritaire</li>
+                <li><strong>Espacement:</strong> 8px-12px avec le texte associé</li>
+            </ul>
+        </div>
+    </div>
 
-        // Job Rendering
-        function renderJobs() {
-            const categories = ['notApplied', 'inProgress', 'applied', 'interviewed'];
-            categories.forEach(category => {
-                const container = document.getElementById(category);
-                container.innerHTML = '';
+    <!-- Guidelines d'Usage -->
+    <div class="section">
+        <h2>📋 Guidelines d'Usage</h2>
+        
+        <h3>Responsive Design</h3>
+        <div class="usage-examples">
+            <h4>📱 Points de rupture</h4>
+            <ul>
+                <li><strong>Mobile:</strong> < 576px</li>
+                <li><strong>Tablette:</strong> 576px - 768px</li>
+                <li><strong>Desktop:</strong> 768px - 1200px</li>
+                <li><strong>Large:</strong> > 1200px</li>
+            </ul>
+            
+            <h4>🎯 Adaptations principales</h4>
+            <ul>
+                <li><strong>Logo:</strong> 70px (mobile) → 90px (desktop)</li>
+                <li><strong>H1:</strong> 28px (mobile) → 48px (desktop)</li>
+                <li><strong>Padding:</strong> 16px (mobile) → 32px (desktop)</li>
+                <li><strong>Grille:</strong> 1 col (mobile) → 2-3 cols (desktop)</li>
+            </ul>
+        </div>
+
+        <h3>Accessibilité</h3>
+        <div class="usage-examples">
+            <h4>♿ Standards WCAG 2.1</h4>
+            <ul>
+                <li><strong>Contraste:</strong> Minimum 4.5:1 pour le texte</li>
+                <li><strong>Focus:</strong> Indicateurs visuels clairs</li>
+                <li><strong>Tailles:</strong> Zone de clic minimum 44px</li>
+                <li><strong>Navigation:</strong> Support clavier complet</li>
+            </ul>
+        </div>
+
+        <h3>Performance</h3>
+        <div class="usage-examples">
+            <h4>⚡ Optimisations</h4>
+            <ul>
+                <li><strong>Images:</strong> WebP avec fallback PNG/JPG</li>
+                <li><strong>Polices:</strong> System fonts en priorité</li>
+                <li><strong>CSS:</strong> Minification et compression</li>
+                <li><strong>Animations:</strong> GPU-accelerated (transform, opacity)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Variables CSS complètes -->
+    <div class="section">
+        <h2>💻 Variables CSS Complètes</h2>
+        
+        <div style="background: #1f2937; color: #e5e7eb; padding: 24px; border-radius: 12px; overflow-x: auto;">
+            <pre style="margin: 0; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.6;">:root {
+/* Couleurs principales */
+--primary: #2563eb;
+--primary-light: #3b82f6;
+--secondary: #10b981;
+--tertiary: #f59e0b;
+
+/* Effets glassmorphism */
+--glass-bg: rgba(255, 255, 255, 0.08);
+--glass-border: rgba(255, 255, 255, 0.18);
+
+/* Texte */
+--text-primary: #f3f4f6;
+--text-secondary: #9ca3af;
+
+/* Composants */
+--card-bg: rgba(26, 35, 50, 0.7);
+--card-border: rgba(96, 165, 250, 0.2);
+--shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+--transition: all 0.3s ease;
+
+/* Typographie */
+--font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+--h1-size: 48px;
+--h2-size: 42px;
+--h3-size: 24px;
+--body-size: 16px;
+
+/* Espacement */
+--space-xs: 8px;
+--space-sm: 16px;
+--space-md: 24px;
+--space-lg: 32px;
+--space-xl: 48px;
+--space-2xl: 80px;
+
+/* Border radius */
+--radius-sm: 8px;
+--radius-md: 12px;
+--radius-lg: 16px;
+--radius-xl: 20px;
+```
+
+}</pre>
+</div>
+</div>
+
+```
+    <!-- Ressources de téléchargement -->
+    <div class="download-section">
+        <h3>📦 Ressources de Téléchargement</h3>
+        <p>Téléchargez les assets officiels et les templates</p>
+        
+        <div style="margin: 24px 0;">
+            <a href="#" class="download-btn">📱 Kit Logo (PNG, SVG)</a>
+            <a href="#" class="download-btn">🎨 Palette Couleurs (ASE)</a>
+            <a href="#" class="download-btn">💻 Template HTML</a>
+            <a href="#" class="download-btn">📋 Guidelines PDF</a>
+        </div>
+        
+        <div style="margin-top: 24px; font-size: 14px; color: #6b7280;">
+            <strong>Contact Brand:</strong> design@atticusconseil.com<br>
+            <strong>Version:</strong> 1.0 - Janvier 2025
+        </div>
+    </div>
+</div>
+
+<script>
+    // Interactive elements
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add hover effects to color cards
+        const colorCards = document.querySelectorAll('.color-card');
+        colorCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+                this.style.boxShadow = '0 8px 24px rgba(0,0,0,0.12)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
+            });
+        });
+        
+        // Add click to copy functionality
+        const colorValues = document.querySelectorAll('.color-values div');
+        colorValues.forEach(div => {
+            if (div.textContent.includes('HEX:')) {
+                div.style.cursor = 'pointer';
+                div.title = 'Cliquer pour copier';
                 
-                jobs.filter(job => job.status === category)
-                    .sort((a, b) => new Date(a.deadline) - new Date(b.deadline))
-                    .forEach(job => createJobCard(job, container));
-            });
-        }
-
-        function createJobCard(job, container) {
-            const jobCard = document.createElement('div');
-            jobCard.className = `job-card ${isUrgent(job.deadline) ? 'urgent' : ''}`;
-            jobCard.innerHTML = `
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <h3 style="margin: 0;">${job.company}</h3>
-                        <p style="margin: 5px 0; color: #666;">${job.position}</p>
-                    </div>
-                    <span class="badge ${isUrgent(job.deadline) ? 'urgent-badge' : ''}">
-                        ${formatDate(job.deadline)}
-                    </span>
-                </div>
-                <div class="status-controls">
-                    <button class="btn btn-primary" onclick="changeStatus('${job.id}', '${getNextStatus(job.status)}')">
-                        ➡ Next Stage
-                    </button>
-                    <button class="btn" onclick="generateAIPrompt('${job.id}')">
-                        🤖 AI Letter
-                    </button>
-                    <button class="btn btn-danger" onclick="deleteJob('${job.id}')">
-                        🗑️ Delete
-                    </button>
-                </div>
-            `;
-            container.appendChild(jobCard);
-        }
-            
-        
-
-         function deleteJob(jobId) {
-            if (confirm('Are you sure you want to delete this application?')) {
-                jobs = jobs.filter(job => job.id != jobId);
-                localStorage.setItem('jobs', JSON.stringify(jobs));
-                renderJobs();
+                div.addEventListener('click', function() {
+                    const hex = this.textContent.match(/#[a-fA-F0-9]{6}/);
+                    if (hex) {
+                        navigator.clipboard.writeText(hex[0]);
+                        
+                        const original = this.style.background;
+                        this.style.background = '#10b981';
+                        this.style.color = 'white';
+                        this.style.borderRadius = '4px';
+                        
+                        setTimeout(() => {
+                            this.style.background = original;
+                            this.style.color = '';
+                            this.style.borderRadius = '';
+                        }, 1000);
+                    }
+                });
             }
-        }
+        });
+    });
+</script>
+```
 
-        // Status Management
-        function getNextStatus(currentStatus) {
-            const statusOrder = ['notApplied', 'inProgress', 'applied', 'interviewed'];
-            return statusOrder[statusOrder.indexOf(currentStatus) + 1] || currentStatus;
-        }
-
-        function changeStatus(jobId, newStatus) {
-            jobs = jobs.map(job => 
-                job.id == jobId ? {...job, status: newStatus} : job
-            );
-            localStorage.setItem('jobs', JSON.stringify(jobs));
-            renderJobs();
-        }
-
-        // AI Prompt Generation
-        function generateAIPrompt(jobId) {
-            const job = jobs.find(job => job.id == jobId);
-            if (!userInfo.name) {
-                alert('Please complete your profile first!');
-                return showModal('userInfoModal');
-            }
-
-            const prompt = `Generate a professional cover letter using these details:
-
-[Applicant Information]
-Name: ${userInfo.name}
-Email: ${userInfo.email}
-Key Skills: ${userInfo.skills || 'Not specified'}
-
-[Position Details]
-Company: ${job.company}
-Role: ${job.position}
-Deadline: ${formatDate(job.deadline)}
-
-[Job Requirements]
-${job.requirements}
-
-[Job Description]
-${job.description}
-
-[Instructions]
-1. Use standard business letter format
-2. Highlight 3 key skills matching the requirements
-3. Include specific achievements/experience and tie them to why it would make me perfect for the job / or how this helped me develop a skill that would help me do the job well
-4. Keep under 250 words
-5. Professional but modern tone
-6. Make the letter natural and human but not too much 
-7. Make sure to match the skills given in the CV with skills written in the requirements 
-8. Make sure to accentuate what I can provide for the company
-9. Why i'm a culture fit 
-10. End with call to action
-11. Don't hesitate to use the internet to find more information, but if not it's okay, this is not a strict instruction. 
-11. Here is a template letter i've written (in french): " À l’attention de Monsieur Axel Merger,
-Banquier Privé 
-Edmond de Rothschild
-47 Rue du Faubourg Saint-Honoré, 75008 Paris
-
-Candidature pour un apprentissage au poste d'assistant sales assurance-vie. 
-
-Monsieur Merger,
-Je souhaite être considéré pour le poste d'assistant sales assurance-vie chez Edmond de Rothschild. Cet échange m’a été recommandé par Baptiste Balzac, ancien alternant dans votre équipe.
-En tant qu’assistant sales assurance-vie, je m’engage à concevoir des supports de présentation alignés avec les valeurs d’excellence de la maison, en tenant compte des informations détaillées transmises par le banquier privé et en collaborant avec vos experts internes en Private Equity, Real Estate et Assurance. Mon objectif serait de contribuer activement à la mise en place de propositions à partir des cahiers des charges du banquier privé, en coordonnant efficacement les demandes du client et les ajustements nécessaires avec l’équipe pour renforcer la qualité de chaque projet. 
-Actuellement étudiant en L3 Gestion de patrimoine à l’Université Paris Dauphine, je bénéficie d’une formation polyvalente, allant de la fiscalité à l’analyse financière en passant par des situations pratiques de gestion de la relation client. Mon stage en tant que chargé d’études juridiques et statistiques au ministère de l’Intérieur m’a permis de développer une capacité d’analyse fine et d’argumentation précise, des qualités qui me rendent particulièrement apte à vous assister dans les missions de gestion et d’accompagnement en vente assurance-vie. Par ailleurs, ayant grandi aux États-Unis et vécu à Taïwan, en France et au Royaume-Uni, avec des racines taïwanaises et françaises, je suis convaincu que mon parcours m’a donné une perspective internationale et culturellement diversifiée sur de nombreux problèmes, qui s'ajoute à ma maîtrise de plusieurs langues – mandarin, anglais, japonais et espagnol. Ces atouts me permettraient de m’épanouir pleinement dans l’environnement dynamique et international d’Edmond de Rothschild.
-Je serais ravi de vous rencontrer afin de vous présenter plus en détail mes motivations et mes compétences. Je vous prie d'agréer,  Monsieur Merger, l'expression de mes salutations distinguées.
-Léo Chen.
-
-" `;
-
-
-            document.getElementById('aiPromptText').textContent = prompt;
-            showModal('aiPromptModal');
-        }
-
-        function copyPrompt() {
-            navigator.clipboard.writeText(document.getElementById('aiPromptText').textContent);
-            alert('Prompt copied to clipboard!');
-        }
-
-        // Export Functionality
-        function exportToExcel() {
-            const csvContent = [
-                ['Company', 'Position', 'Status', 'Deadline', 'Date Added', 'Requirements'],
-                ...jobs.map(job => [
-                    `"${job.company}"`,
-                    `"${job.position}"`,
-                    job.status,
-                    job.deadline,
-                    job.added,
-                    `"${job.requirements.replace(/"/g, '""')}"`
-                ])
-            ].map(row => row.join(',')).join('\n');
-
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'job_applications.csv';
-            link.click();
-        }
-
-        // Utility Functions
-        function isUrgent(deadline) {
-            const diffTime = new Date(deadline) - new Date();
-            return diffTime < (1000 * 60 * 60 * 24 * 3); // 3 days
-        }
-
-        function formatDate(dateString) {
-            if (!dateString) return 'No deadline';
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-US', {
-                month: 'short',
-                day: 'numeric',
-                year: date.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined
-            });
-        }
-
-        // Initialization
-        if (!userInfo.name) showModal('userInfoModal');
-        renderJobs();
-
-        // Close modals when clicking outside
-        window.onclick = function(event) {
-            if (event.target.className === 'modal') {
-                event.target.style.display = 'none';
-            }
-        }
-    </script>
 </body>
 </html>
