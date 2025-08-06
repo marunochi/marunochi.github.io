@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charte Graphique - Atticus Chat</title>
+    <title>Brand Guidelines - Atticus Chat</title>
     <style>
         * {
             margin: 0;
@@ -17,81 +17,96 @@
         font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         line-height: 1.6;
         color: #333;
-        background: #f8f9fa;
+        background: #ffffff;
     }
 
     .container {
-        max-width: 1200px;
+        max-width: 900px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 40px 20px;
     }
 
     .header {
-        background: linear-gradient(135deg, #2563eb, #3b82f6);
-        color: white;
-        padding: 60px 20px;
         text-align: center;
-        margin-bottom: 40px;
-        border-radius: 16px;
+        margin-bottom: 60px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #f0f0f0;
     }
 
     .header h1 {
         font-size: 48px;
         font-weight: 800;
-        margin-bottom: 16px;
-        background: linear-gradient(135deg, #ffffff, #e2e8f0);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        -webkit-text-fill-color: transparent;
+        color: #2563eb;
+        margin-bottom: 12px;
+    }
+
+    .header p {
+        font-size: 20px;
+        color: #666;
     }
 
     .section {
-        background: white;
-        border-radius: 16px;
-        padding: 40px;
-        margin-bottom: 32px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        border: 1px solid #e5e7eb;
+        margin-bottom: 50px;
     }
 
     .section h2 {
         font-size: 32px;
         font-weight: 700;
-        margin-bottom: 24px;
-        background: linear-gradient(135deg, #2563eb, #10b981);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .section h3 {
-        font-size: 24px;
-        font-weight: 600;
-        margin-bottom: 16px;
         color: #1f2937;
+        margin-bottom: 30px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e5e7eb;
     }
 
-    .section h4 {
+    .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin: 30px 0;
+    }
+
+    .logo-item {
+        text-align: center;
+        padding: 40px 20px;
+        border: 2px solid #f0f0f0;
+        border-radius: 12px;
+        background: #fafafa;
+    }
+
+    .logo-item.dark {
+        background: #1f2937;
+        color: white;
+    }
+
+    .logo-item img {
+        max-height: 120px;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    .logo-item h3 {
         font-size: 18px;
         font-weight: 600;
-        margin-bottom: 12px;
-        color: #374151;
+        margin-bottom: 8px;
+    }
+
+    .logo-item p {
+        font-size: 14px;
+        opacity: 0.7;
     }
 
     .color-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin: 24px 0;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
     }
 
     .color-card {
-        border: 1px solid #e5e7eb;
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        border: 2px solid #f0f0f0;
+        background: white;
     }
 
     .color-sample {
@@ -100,243 +115,167 @@
         align-items: center;
         justify-content: center;
         color: white;
-        font-weight: 600;
-        font-size: 14px;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        font-weight: 700;
+        font-size: 16px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
     }
 
     .color-info {
-        padding: 16px;
-        background: #f9fafb;
+        padding: 20px;
+        text-align: center;
     }
 
-    .color-info h4 {
-        font-size: 16px;
+    .color-info h3 {
+        font-size: 18px;
         font-weight: 600;
         margin-bottom: 8px;
         color: #1f2937;
     }
 
-    .color-values {
-        font-size: 12px;
-        color: #6b7280;
+    .hex-code {
+        font-size: 20px;
+        font-weight: 700;
         font-family: 'Courier New', monospace;
-    }
-
-    .color-values div {
-        margin: 4px 0;
-    }
-
-    .typography-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 32px;
-        margin: 24px 0;
-    }
-
-    .type-sample {
-        padding: 24px;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        background: #fafbfc;
-    }
-
-    .type-sample h4 {
-        font-size: 14px;
-        font-weight: 500;
-        color: #6b7280;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .logo-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 32px;
-        margin: 24px 0;
-    }
-
-    .logo-sample {
-        padding: 40px;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        text-align: center;
-        background: #fafbfc;
-    }
-
-    .logo-dark {
-        background: linear-gradient(135deg, #1f2937, #374151);
-    }
-
-    .logo-sample img {
-        max-height: 100px;
-        width: auto;
-        margin-bottom: 16px;
-    }
-
-    .gradient-sample {
-        height: 80px;
-        border-radius: 8px;
-        margin: 12px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: 600;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-    }
-
-    .component-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin: 24px 0;
-    }
-
-    .component-sample {
-        padding: 24px;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        background: #fafbfc;
-    }
-
-    .btn-sample {
-        display: inline-block;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: 600;
-        text-decoration: none;
-        margin: 8px 8px 8px 0;
-        transition: all 0.2s ease;
-        border: none;
+        color: #2563eb;
+        margin-bottom: 8px;
         cursor: pointer;
+        padding: 8px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+    }
+
+    .hex-code:hover {
+        background: #2563eb;
+        color: white;
+    }
+
+    .color-usage {
         font-size: 14px;
+        color: #666;
+        margin-top: 8px;
     }
 
-    .btn-primary {
-        background: linear-gradient(135deg, #2563eb, #3b82f6);
-        color: white;
+    .font-section {
+        background: #f8f9fa;
+        padding: 40px;
+        border-radius: 12px;
+        margin: 30px 0;
     }
 
-    .btn-secondary {
-        background: linear-gradient(135deg, #10b981, #34d399);
-        color: white;
+    .font-demo {
+        margin: 30px 0;
+        padding: 30px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: white;
     }
 
-    .btn-tertiary {
-        background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    .font-demo h3 {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .size-48 { font-size: 48px; font-weight: 800; }
+    .size-32 { font-size: 32px; font-weight: 700; }
+    .size-24 { font-size: 24px; font-weight: 600; }
+    .size-18 { font-size: 18px; font-weight: 500; }
+    .size-16 { font-size: 16px; font-weight: 400; }
+
+    .specs {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    .specs table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .specs td {
+        padding: 8px 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .specs td:first-child {
+        font-weight: 600;
+        width: 30%;
+        color: #374151;
+    }
+
+    .specs td:last-child {
+        font-family: 'Courier New', monospace;
         color: #1f2937;
     }
 
-    .glass-sample {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 16px;
-        padding: 24px;
-        margin: 16px 0;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .glass-sample::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(ellipse at top, #0f1419, #1a2332);
-        z-index: -1;
-    }
-
-    .glass-sample * {
-        color: white;
-    }
-
-    .spacing-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 16px;
-        margin: 24px 0;
-    }
-
-    .spacing-sample {
-        text-align: center;
-        padding: 16px;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        background: #f9fafb;
-    }
-
-    .spacing-visual {
-        width: 100%;
-        height: 40px;
-        background: linear-gradient(135deg, #e5e7eb, #d1d5db);
-        border-radius: 4px;
-        margin: 8px 0;
-        position: relative;
-    }
-
     .download-section {
-        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-        border-radius: 12px;
-        padding: 32px;
-        text-align: center;
-        margin: 32px 0;
-    }
-
-    .download-btn {
-        display: inline-block;
         background: linear-gradient(135deg, #2563eb, #3b82f6);
         color: white;
-        padding: 14px 28px;
+        padding: 40px;
+        border-radius: 16px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .download-section h3 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .download-section p {
+        opacity: 0.9;
+        margin-bottom: 30px;
+    }
+
+    .contact-info {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .contact-info h4 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        color: #1f2937;
+    }
+
+    .contact-info p {
+        color: #666;
+        margin: 8px 0;
+    }
+
+    .copy-notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #10b981;
+        color: white;
+        padding: 12px 20px;
         border-radius: 8px;
-        text-decoration: none;
         font-weight: 600;
-        margin: 8px;
-        transition: all 0.2s ease;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
 
-    .download-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    }
-
-    code {
-        background: #f1f5f9;
-        border: 1px solid #e2e8f0;
-        border-radius: 4px;
-        padding: 2px 6px;
-        font-family: 'Courier New', monospace;
-        font-size: 13px;
-        color: #1e40af;
-    }
-
-    .usage-examples {
-        background: #f8fafc;
-        border-left: 4px solid #2563eb;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 0 8px 8px 0;
+    .copy-notification.show {
+        opacity: 1;
     }
 
     @media (max-width: 768px) {
-        .header h1 {
-            font-size: 36px;
-        }
-        
-        .section {
-            padding: 24px;
-        }
-        
-        .color-grid,
-        .typography-grid,
-        .logo-grid,
-        .component-grid {
-            grid-template-columns: 1fr;
-        }
+        .header h1 { font-size: 36px; }
+        .section h2 { font-size: 24px; }
+        .logo-grid, .color-grid { grid-template-columns: 1fr; }
+        .font-section { padding: 20px; }
+        .size-48 { font-size: 32px; }
+        .size-32 { font-size: 24px; }
     }
 </style>
 ```
@@ -345,535 +284,239 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Charte Graphique</h1>
-            <h2 style="font-size: 24px; font-weight: 400; margin: 0;">Atticus Chat - Assistant IA Patrimonial</h2>
-            <p style="margin-top: 16px; opacity: 0.9;">Guide complet d'utilisation de l'identité visuelle</p>
+            <h1>Brand Guidelines</h1>
+            <p>Atticus Chat - Assistant IA Patrimonial</p>
         </div>
 
 ```
-    <!-- Logo & Identité -->
+    <!-- LOGO -->
     <div class="section">
-        <h2>🎯 Logo & Identité Visuelle</h2>
+        <h2>🏢 Logo</h2>
         
-        <h3>Versions du Logo</h3>
         <div class="logo-grid">
-            <div class="logo-sample">
-                <img src="https://atticuschat.b-cdn.net/logo%20compressed.png" alt="Logo Atticus Chat">
-                <h4>Logo Principal</h4>
-                <p><code>logo-compressed.png</code></p>
-                <p>Usage: Fonds colorés, impression</p>
+            <div class="logo-item">
+                <img src="https://atticuschat.b-cdn.net/logo%20compressed.png" alt="Logo Atticus">
+                <h3>Logo Principal</h3>
+                <p>Usage général, fonds clairs</p>
             </div>
-            <div class="logo-sample logo-dark">
-                <img src="https://atticuschat.b-cdn.net/white%20transparent.png" alt="Logo Blanc Atticus Chat">
-                <h4>Logo Blanc</h4>
-                <p style="color: #e5e7eb;"><code>white-transparent.png</code></p>
-                <p style="color: #e5e7eb;">Usage: Fonds sombres, interfaces</p>
+            
+            <div class="logo-item dark">
+                <img src="https://atticuschat.b-cdn.net/white%20transparent.png" alt="Logo Blanc">
+                <h3>Logo Blanc</h3>
+                <p>Fonds sombres, interfaces</p>
             </div>
-            <div class="logo-sample logo-dark">
+            
+            <div class="logo-item dark">
                 <img src="https://atticuschat.b-cdn.net/white%20transaprent%20with%20slogan.png" alt="Logo avec slogan">
-                <h4>Logo avec Slogan</h4>
-                <p style="color: #e5e7eb;"><code>white-with-slogan.png</code></p>
-                <p style="color: #e5e7eb;">Usage: Headers, footers</p>
+                <h3>Logo + Slogan</h3>
+                <p>Headers, communications</p>
             </div>
         </div>
 
-        <div class="usage-examples">
-            <h4>📐 Règles d'usage du logo</h4>
-            <ul>
-                <li><strong>Taille minimale:</strong> 70px de hauteur (mobile), 90px (desktop)</li>
-                <li><strong>Zone de protection:</strong> Équivalent à la hauteur du logo</li>
-                <li><strong>Ratio:</strong> Conserver les proportions originales</li>
-                <li><strong>Positionnement:</strong> Alignement à gauche recommandé</li>
-            </ul>
+        <div class="specs">
+            <table>
+                <tr><td>Taille minimum</td><td>70px hauteur (mobile) - 90px (desktop)</td></tr>
+                <tr><td>Zone de protection</td><td>Hauteur du logo</td></tr>
+                <tr><td>Formats</td><td>PNG, SVG (recommandé)</td></tr>
+                <tr><td>Placement</td><td>Alignement gauche de préférence</td></tr>
+            </table>
         </div>
     </div>
 
-    <!-- Palette de Couleurs -->
+    <!-- COULEURS -->
     <div class="section">
-        <h2>🎨 Palette de Couleurs</h2>
+        <h2>🎨 Couleurs</h2>
         
-        <h3>Couleurs Principales</h3>
         <div class="color-grid">
             <div class="color-card">
                 <div class="color-sample" style="background: #2563eb;">
-                    Primary Blue
+                    PRIMARY
                 </div>
                 <div class="color-info">
-                    <h4>Bleu Principal</h4>
-                    <div class="color-values">
-                        <div><strong>HEX:</strong> #2563eb</div>
-                        <div><strong>RGB:</strong> 37, 99, 235</div>
-                        <div><strong>HSL:</strong> 217, 83%, 53%</div>
-                        <div><strong>CSS:</strong> var(--primary)</div>
-                    </div>
+                    <h3>Bleu Principal</h3>
+                    <div class="hex-code" onclick="copyHex('#2563eb')">#2563eb</div>
+                    <div class="color-usage">Boutons, liens, accents</div>
                 </div>
             </div>
 
             <div class="color-card">
                 <div class="color-sample" style="background: #3b82f6;">
-                    Primary Light
+                    PRIMARY LIGHT
                 </div>
                 <div class="color-info">
-                    <h4>Bleu Clair</h4>
-                    <div class="color-values">
-                        <div><strong>HEX:</strong> #3b82f6</div>
-                        <div><strong>RGB:</strong> 59, 130, 246</div>
-                        <div><strong>HSL:</strong> 213, 91%, 60%</div>
-                        <div><strong>CSS:</strong> var(--primary-light)</div>
-                    </div>
+                    <h3>Bleu Clair</h3>
+                    <div class="hex-code" onclick="copyHex('#3b82f6')">#3b82f6</div>
+                    <div class="color-usage">Hover, variations</div>
                 </div>
             </div>
 
             <div class="color-card">
                 <div class="color-sample" style="background: #10b981;">
-                    Secondary Green
+                    SECONDARY
                 </div>
                 <div class="color-info">
-                    <h4>Vert Secondaire</h4>
-                    <div class="color-values">
-                        <div><strong>HEX:</strong> #10b981</div>
-                        <div><strong>RGB:</strong> 16, 185, 129</div>
-                        <div><strong>HSL:</strong> 160, 84%, 39%</div>
-                        <div><strong>CSS:</strong> var(--secondary)</div>
-                    </div>
+                    <h3>Vert Success</h3>
+                    <div class="hex-code" onclick="copyHex('#10b981')">#10b981</div>
+                    <div class="color-usage">Success, validation</div>
                 </div>
             </div>
 
             <div class="color-card">
                 <div class="color-sample" style="background: #f59e0b; color: #1f2937;">
-                    Tertiary Orange
+                    TERTIARY
                 </div>
                 <div class="color-info">
-                    <h4>Orange Tertiaire</h4>
-                    <div class="color-values">
-                        <div><strong>HEX:</strong> #f59e0b</div>
-                        <div><strong>RGB:</strong> 245, 158, 11</div>
-                        <div><strong>HSL:</strong> 38, 92%, 50%</div>
-                        <div><strong>CSS:</strong> var(--tertiary)</div>
-                    </div>
+                    <h3>Orange Accent</h3>
+                    <div class="hex-code" onclick="copyHex('#f59e0b')">#f59e0b</div>
+                    <div class="color-usage">Avertissements, CTA</div>
                 </div>
             </div>
-        </div>
 
-        <h3>Couleurs de Texte</h3>
-        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-sample" style="background: #1f2937;">
+                    DARK
+                </div>
+                <div class="color-info">
+                    <h3>Gris Foncé</h3>
+                    <div class="hex-code" onclick="copyHex('#1f2937')">#1f2937</div>
+                    <div class="color-usage">Texte principal</div>
+                </div>
+            </div>
+
+            <div class="color-card">
+                <div class="color-sample" style="background: #6b7280;">
+                    GRAY
+                </div>
+                <div class="color-info">
+                    <h3>Gris Moyen</h3>
+                    <div class="hex-code" onclick="copyHex('#6b7280')">#6b7280</div>
+                    <div class="color-usage">Texte secondaire</div>
+                </div>
+            </div>
+
             <div class="color-card">
                 <div class="color-sample" style="background: #f3f4f6; color: #1f2937;">
-                    Text Primary
+                    LIGHT
                 </div>
                 <div class="color-info">
-                    <h4>Texte Principal</h4>
-                    <div class="color-values">
-                        <div><strong>HEX:</strong> #f3f4f6</div>
-                        <div><strong>Usage:</strong> Texte principal sur fonds sombres</div>
-                    </div>
+                    <h3>Gris Clair</h3>
+                    <div class="hex-code" onclick="copyHex('#f3f4f6')">#f3f4f6</div>
+                    <div class="color-usage">Backgrounds, cartes</div>
                 </div>
             </div>
 
             <div class="color-card">
-                <div class="color-sample" style="background: #9ca3af;">
-                    Text Secondary
+                <div class="color-sample" style="background: #ffffff; color: #1f2937; border: 1px solid #e5e7eb;">
+                    WHITE
                 </div>
                 <div class="color-info">
-                    <h4>Texte Secondaire</h4>
-                    <div class="color-values">
-                        <div><strong>HEX:</strong> #9ca3af</div>
-                        <div><strong>Usage:</strong> Sous-titres, descriptions</div>
-                    </div>
+                    <h3>Blanc</h3>
+                    <div class="hex-code" onclick="copyHex('#ffffff')">#ffffff</div>
+                    <div class="color-usage">Fond principal</div>
                 </div>
-            </div>
-        </div>
-
-        <h3>Dégradés Signature</h3>
-        <div class="gradient-sample" style="background: linear-gradient(135deg, #2563eb, #3b82f6);">
-            Primary Gradient
-        </div>
-        <code>background: linear-gradient(135deg, #2563eb, #3b82f6);</code>
-
-        <div class="gradient-sample" style="background: linear-gradient(135deg, #10b981, #34d399);">
-            Secondary Gradient  
-        </div>
-        <code>background: linear-gradient(135deg, #10b981, #34d399);</code>
-
-        <div class="gradient-sample" style="background: linear-gradient(135deg, #60a5fa, #34d399, #fbbf24);">
-            Brand Gradient (Titres)
-        </div>
-        <code>background: linear-gradient(135deg, #60a5fa, #34d399, #fbbf24);</code>
-    </div>
-
-    <!-- Typographie -->
-    <div class="section">
-        <h2>📝 Typographie</h2>
-        
-        <h3>Police Principale</h3>
-        <div class="usage-examples">
-            <h4>Font Stack Complet</h4>
-            <code>font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;</code>
-            <p><strong>Justification:</strong> Police système optimisée, lisible et moderne sur tous les appareils</p>
-        </div>
-
-        <div class="typography-grid">
-            <div class="type-sample">
-                <h4>H1 - Titre Principal</h4>
-                <div style="font-size: 48px; font-weight: 800; line-height: 1.2; background: linear-gradient(135deg, #2563eb, #10b981); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;">
-                    L'Assistant IA
-                </div>
-                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
-                    <strong>Taille:</strong> 48px (desktop), 36px (mobile)<br>
-                    <strong>Poids:</strong> 800<br>
-                    <strong>Ligne:</strong> 1.2<br>
-                    <strong>Gradient:</strong> Primary → Secondary
-                </p>
-            </div>
-
-            <div class="type-sample">
-                <h4>H2 - Titre Section</h4>
-                <div style="font-size: 42px; font-weight: 700; line-height: 1.3; background: linear-gradient(135deg, #3b82f6, #10b981); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;">
-                    Fonctionnalités
-                </div>
-                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
-                    <strong>Taille:</strong> 42px (desktop), 32px (mobile)<br>
-                    <strong>Poids:</strong> 700<br>
-                    <strong>Ligne:</strong> 1.3
-                </p>
-            </div>
-
-            <div class="type-sample">
-                <h4>H3 - Sous-titre</h4>
-                <div style="font-size: 24px; font-weight: 600; line-height: 1.4; color: #1f2937;">
-                    Gestion de Patrimoine
-                </div>
-                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
-                    <strong>Taille:</strong> 24px<br>
-                    <strong>Poids:</strong> 600<br>
-                    <strong>Couleur:</strong> #1f2937
-                </p>
-            </div>
-
-            <div class="type-sample">
-                <h4>Body - Texte Courant</h4>
-                <div style="font-size: 16px; font-weight: 400; line-height: 1.6; color: #374151;">
-                    Votre assistant expert en gestion de patrimoine et investissement. Posez vos questions sur les placements, la fiscalité et la préparation retraite.
-                </div>
-                <p style="margin-top: 12px; font-size: 14px; color: #6b7280;">
-                    <strong>Taille:</strong> 16px<br>
-                    <strong>Poids:</strong> 400<br>
-                    <strong>Ligne:</strong> 1.6<br>
-                    <strong>Couleur:</strong> #374151
-                </p>
             </div>
         </div>
     </div>
 
-    <!-- Effets Glassmorphism -->
+    <!-- TYPOGRAPHIE -->
     <div class="section">
-        <h2>✨ Effets Glassmorphism</h2>
+        <h2>✏️ Typographie</h2>
         
-        <h3>Effet Verre Signature</h3>
-        <div class="glass-sample">
-            <h4>Composant Glassmorphism</h4>
-            <p>Cet effet donne une sensation de profondeur et de modernité à l'interface.</p>
-            <div style="margin-top: 16px;">
-                <code style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                    background: rgba(255, 255, 255, 0.08);<br>
-                    backdrop-filter: blur(12px);<br>
-                    border: 1px solid rgba(255, 255, 255, 0.18);<br>
-                    border-radius: 16px;
-                </code>
+        <div class="font-section">
+            <h3 style="font-size: 24px; margin-bottom: 20px; color: #1f2937;">Police Principale</h3>
+            <div style="font-size: 18px; font-family: 'Courier New', monospace; background: white; padding: 16px; border-radius: 8px; margin-bottom: 30px;">
+                font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            </div>
+
+            <div class="font-demo">
+                <h3>H1 - Titre Principal</h3>
+                <div class="size-48" style="color: #1f2937; margin: 16px 0;">L'Assistant IA Patrimonial</div>
+                <div style="font-size: 14px; color: #666;">48px / 800 weight / 1.2 line-height</div>
+            </div>
+
+            <div class="font-demo">
+                <h3>H2 - Titre Section</h3>
+                <div class="size-32" style="color: #1f2937; margin: 16px 0;">Fonctionnalités Avancées</div>
+                <div style="font-size: 14px; color: #666;">32px / 700 weight / 1.3 line-height</div>
+            </div>
+
+            <div class="font-demo">
+                <h3>H3 - Sous-titre</h3>
+                <div class="size-24" style="color: #1f2937; margin: 16px 0;">Gestion de Patrimoine</div>
+                <div style="font-size: 14px; color: #666;">24px / 600 weight / 1.4 line-height</div>
+            </div>
+
+            <div class="font-demo">
+                <h3>H4 - Titre Carte</h3>
+                <div class="size-18" style="color: #1f2937; margin: 16px 0;">Optimisation Fiscale</div>
+                <div style="font-size: 14px; color: #666;">18px / 500 weight / 1.5 line-height</div>
+            </div>
+
+            <div class="font-demo">
+                <h3>Body - Texte Courant</h3>
+                <div class="size-16" style="color: #374151; margin: 16px 0;">Votre assistant expert en gestion de patrimoine et investissement. Posez vos questions sur les placements, la fiscalité et la préparation de votre retraite.</div>
+                <div style="font-size: 14px; color: #666;">16px / 400 weight / 1.6 line-height</div>
             </div>
         </div>
 
-        <div class="usage-examples">
-            <h4>🔧 Variables CSS Glassmorphism</h4>
-            <div style="font-family: monospace; font-size: 14px; line-height: 1.8;">
-                --glass-bg: rgba(255, 255, 255, 0.08);<br>
-                --glass-border: rgba(255, 255, 255, 0.18);<br>
-                --card-bg: rgba(26, 35, 50, 0.7);<br>
-                --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            </div>
+        <div class="specs">
+            <h4 style="margin-bottom: 16px; color: #1f2937;">Échelle Typographique</h4>
+            <table>
+                <tr><td>H1</td><td>48px / 800 weight</td></tr>
+                <tr><td>H2</td><td>32px / 700 weight</td></tr>
+                <tr><td>H3</td><td>24px / 600 weight</td></tr>
+                <tr><td>H4</td><td>18px / 500 weight</td></tr>
+                <tr><td>Body</td><td>16px / 400 weight</td></tr>
+                <tr><td>Small</td><td>14px / 400 weight</td></tr>
+            </table>
         </div>
     </div>
 
-    <!-- Composants UI -->
-    <div class="section">
-        <h2>🔧 Composants UI</h2>
-        
-        <h3>Boutons</h3>
-        <div class="component-grid">
-            <div class="component-sample">
-                <h4>Bouton Principal</h4>
-                <button class="btn-sample btn-primary">Demander l'accès Beta</button>
-                <div style="margin-top: 12px; font-size: 12px; font-family: monospace;">
-                    background: linear-gradient(135deg, #2563eb, #3b82f6);<br>
-                    padding: 18px 38px;<br>
-                    border-radius: 12px;
-                </div>
-            </div>
-
-            <div class="component-sample">
-                <h4>Bouton Secondaire</h4>
-                <button class="btn-sample btn-secondary">Accéder à l'app</button>
-                <div style="margin-top: 12px; font-size: 12px; font-family: monospace;">
-                    background: linear-gradient(135deg, #10b981, #34d399);<br>
-                    États: hover, active, disabled
-                </div>
-            </div>
-
-            <div class="component-sample">
-                <h4>Bouton d'Action</h4>
-                <button class="btn-sample btn-tertiary">Configuration</button>
-                <div style="margin-top: 12px; font-size: 12px; font-family: monospace;">
-                    background: linear-gradient(135deg, #f59e0b, #fbbf24);<br>
-                    Usage: Actions secondaires
-                </div>
-            </div>
-        </div>
-
-        <h3>Espacement & Grille</h3>
-        <div class="spacing-grid">
-            <div class="spacing-sample">
-                <div class="spacing-visual" style="height: 8px;"></div>
-                <strong>8px</strong><br>
-                <small>Micro-espacement</small>
-            </div>
-            <div class="spacing-sample">
-                <div class="spacing-visual" style="height: 16px;"></div>
-                <strong>16px</strong><br>
-                <small>Petit espacement</small>
-            </div>
-            <div class="spacing-sample">
-                <div class="spacing-visual" style="height: 24px;"></div>
-                <strong>24px</strong><br>
-                <small>Espacement moyen</small>
-            </div>
-            <div class="spacing-sample">
-                <div class="spacing-visual" style="height: 32px;"></div>
-                <strong>32px</strong><br>
-                <small>Grand espacement</small>
-            </div>
-            <div class="spacing-sample">
-                <div class="spacing-visual" style="height: 48px;"></div>
-                <strong>48px</strong><br>
-                <small>Très grand</small>
-            </div>
-            <div class="spacing-sample">
-                <div class="spacing-visual" style="height: 80px;"></div>
-                <strong>80px</strong><br>
-                <small>Section</small>
-            </div>
-        </div>
+    <!-- CONTACT -->
+    <div class="contact-info">
+        <h4>📞 Contact Brand</h4>
+        <p><strong>Email:</strong> design@atticusconseil.com</p>
+        <p><strong>Support:</strong> contact@atticusconseil.com</p>
+        <p><strong>Version:</strong> 1.0 - Janvier 2025</p>
     </div>
 
-    <!-- Iconographie -->
-    <div class="section">
-        <h2>📱 Iconographie</h2>
-        
-        <h3>Font Awesome 6.4.0</h3>
-        <div class="component-grid">
-            <div class="component-sample" style="text-align: center;">
-                <div style="font-size: 48px; color: #2563eb; margin: 16px 0;">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h4>Intelligence</h4>
-                <code>fas fa-brain</code>
-            </div>
-            
-            <div class="component-sample" style="text-align: center;">
-                <div style="font-size: 48px; color: #10b981; margin: 16px 0;">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h4>Analytique</h4>
-                <code>fas fa-chart-line</code>
-            </div>
-            
-            <div class="component-sample" style="text-align: center;">
-                <div style="font-size: 48px; color: #f59e0b; margin: 16px 0;">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h4>Sécurité</h4>
-                <code>fas fa-shield-alt</code>
-            </div>
-            
-            <div class="component-sample" style="text-align: center;">
-                <div style="font-size: 48px; color: #6366f1; margin: 16px 0;">
-                    <i class="fas fa-user-tie"></i>
-                </div>
-                <h4>Conseil</h4>
-                <code>fas fa-user-tie</code>
-            </div>
-        </div>
-
-        <div class="usage-examples">
-            <h4>📐 Règles d'usage des icônes</h4>
-            <ul>
-                <li><strong>Tailles standard:</strong> 16px, 24px, 32px, 48px</li>
-                <li><strong>Couleurs:</strong> Utiliser la palette brand</li>
-                <li><strong>Style:</strong> Font Awesome Solid (fas) prioritaire</li>
-                <li><strong>Espacement:</strong> 8px-12px avec le texte associé</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Guidelines d'Usage -->
-    <div class="section">
-        <h2>📋 Guidelines d'Usage</h2>
-        
-        <h3>Responsive Design</h3>
-        <div class="usage-examples">
-            <h4>📱 Points de rupture</h4>
-            <ul>
-                <li><strong>Mobile:</strong> < 576px</li>
-                <li><strong>Tablette:</strong> 576px - 768px</li>
-                <li><strong>Desktop:</strong> 768px - 1200px</li>
-                <li><strong>Large:</strong> > 1200px</li>
-            </ul>
-            
-            <h4>🎯 Adaptations principales</h4>
-            <ul>
-                <li><strong>Logo:</strong> 70px (mobile) → 90px (desktop)</li>
-                <li><strong>H1:</strong> 28px (mobile) → 48px (desktop)</li>
-                <li><strong>Padding:</strong> 16px (mobile) → 32px (desktop)</li>
-                <li><strong>Grille:</strong> 1 col (mobile) → 2-3 cols (desktop)</li>
-            </ul>
-        </div>
-
-        <h3>Accessibilité</h3>
-        <div class="usage-examples">
-            <h4>♿ Standards WCAG 2.1</h4>
-            <ul>
-                <li><strong>Contraste:</strong> Minimum 4.5:1 pour le texte</li>
-                <li><strong>Focus:</strong> Indicateurs visuels clairs</li>
-                <li><strong>Tailles:</strong> Zone de clic minimum 44px</li>
-                <li><strong>Navigation:</strong> Support clavier complet</li>
-            </ul>
-        </div>
-
-        <h3>Performance</h3>
-        <div class="usage-examples">
-            <h4>⚡ Optimisations</h4>
-            <ul>
-                <li><strong>Images:</strong> WebP avec fallback PNG/JPG</li>
-                <li><strong>Polices:</strong> System fonts en priorité</li>
-                <li><strong>CSS:</strong> Minification et compression</li>
-                <li><strong>Animations:</strong> GPU-accelerated (transform, opacity)</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Variables CSS complètes -->
-    <div class="section">
-        <h2>💻 Variables CSS Complètes</h2>
-        
-        <div style="background: #1f2937; color: #e5e7eb; padding: 24px; border-radius: 12px; overflow-x: auto;">
-            <pre style="margin: 0; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.6;">:root {
-/* Couleurs principales */
---primary: #2563eb;
---primary-light: #3b82f6;
---secondary: #10b981;
---tertiary: #f59e0b;
-
-/* Effets glassmorphism */
---glass-bg: rgba(255, 255, 255, 0.08);
---glass-border: rgba(255, 255, 255, 0.18);
-
-/* Texte */
---text-primary: #f3f4f6;
---text-secondary: #9ca3af;
-
-/* Composants */
---card-bg: rgba(26, 35, 50, 0.7);
---card-border: rgba(96, 165, 250, 0.2);
---shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
---transition: all 0.3s ease;
-
-/* Typographie */
---font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
---h1-size: 48px;
---h2-size: 42px;
---h3-size: 24px;
---body-size: 16px;
-
-/* Espacement */
---space-xs: 8px;
---space-sm: 16px;
---space-md: 24px;
---space-lg: 32px;
---space-xl: 48px;
---space-2xl: 80px;
-
-/* Border radius */
---radius-sm: 8px;
---radius-md: 12px;
---radius-lg: 16px;
---radius-xl: 20px;
-```
-
-}</pre>
-</div>
-</div>
-
-```
-    <!-- Ressources de téléchargement -->
     <div class="download-section">
-        <h3>📦 Ressources de Téléchargement</h3>
-        <p>Téléchargez les assets officiels et les templates</p>
-        
-        <div style="margin: 24px 0;">
-            <a href="#" class="download-btn">📱 Kit Logo (PNG, SVG)</a>
-            <a href="#" class="download-btn">🎨 Palette Couleurs (ASE)</a>
-            <a href="#" class="download-btn">💻 Template HTML</a>
-            <a href="#" class="download-btn">📋 Guidelines PDF</a>
-        </div>
-        
-        <div style="margin-top: 24px; font-size: 14px; color: #6b7280;">
-            <strong>Contact Brand:</strong> design@atticusconseil.com<br>
-            <strong>Version:</strong> 1.0 - Janvier 2025
-        </div>
+        <h3>📦 Assets Disponibles</h3>
+        <p>Tous les logos sont disponibles aux URLs ci-dessus en PNG haute résolution</p>
     </div>
+</div>
+
+<div class="copy-notification" id="copyNotification">
+    Code couleur copié ! ✅
 </div>
 
 <script>
-    // Interactive elements
+    function copyHex(hexCode) {
+        navigator.clipboard.writeText(hexCode).then(function() {
+            const notification = document.getElementById('copyNotification');
+            notification.textContent = hexCode + ' copié ! ✅';
+            notification.classList.add('show');
+            
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 2000);
+        });
+    }
+
+    // Add hover effects
     document.addEventListener('DOMContentLoaded', function() {
-        // Add hover effects to color cards
         const colorCards = document.querySelectorAll('.color-card');
         colorCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-                this.style.boxShadow = '0 8px 24px rgba(0,0,0,0.12)';
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = '0 12px 30px rgba(0,0,0,0.15)';
+                this.style.transition = 'all 0.3s ease';
             });
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
+                this.style.boxShadow = 'none';
             });
-        });
-        
-        // Add click to copy functionality
-        const colorValues = document.querySelectorAll('.color-values div');
-        colorValues.forEach(div => {
-            if (div.textContent.includes('HEX:')) {
-                div.style.cursor = 'pointer';
-                div.title = 'Cliquer pour copier';
-                
-                div.addEventListener('click', function() {
-                    const hex = this.textContent.match(/#[a-fA-F0-9]{6}/);
-                    if (hex) {
-                        navigator.clipboard.writeText(hex[0]);
-                        
-                        const original = this.style.background;
-                        this.style.background = '#10b981';
-                        this.style.color = 'white';
-                        this.style.borderRadius = '4px';
-                        
-                        setTimeout(() => {
-                            this.style.background = original;
-                            this.style.color = '';
-                            this.style.borderRadius = '';
-                        }, 1000);
-                    }
-                });
-            }
         });
     });
 </script>
