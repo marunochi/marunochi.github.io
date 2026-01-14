@@ -3,98 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leo Chen | Finance Portfolio</title>
+    <title>Atticus Conseil | Leo Chen</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="homepage">
-    <div class="container">
-        <header class="site-header">
-            <h1 class="site-title">Leo Chen</h1>
-            <p class="site-subtitle">Searching for a 6 months internship in IB, PE, or AM, Starting June - July - September</p>
-        </header>
+<body class="detail-page">
+    <nav class="back-nav">
+        <a href="index.html" class="back-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Home
+        </a>
+    </nav>
 
-        <main class="mosaic-grid">
-            <!-- Large Square: School -->
-            <a href="school.html" class="grid-item large school" data-preview="M1 Finance @ Dauphine-PSL | Corporate Finance, Machine Learning, Financial Law">
-                <div class="item-content">
-                    <div class="item-icon">
-                        <img src="https://atticuschat.b-cdn.net/Dauphine_logo_2019_-_Bleu.png" alt="Dauphine-PSL Logo" style="height: 45px; width: auto;">
-                    </div>
-                    <h2 class="item-title">School</h2>
-                    <p class="item-preview">M1 Finance @ Dauphine-PSL | Corporate Finance, Machine Learning, Financial Law</p>
-                </div>
-            </a>
+    <div class="detail-content">
+        <h1 class="page-title">Atticus Conseil</h1>
+        <p class="page-subtitle">AI-Powered Wealth Management Platform • Founded May 2025 • My own start up</p>
 
-            <!-- Large Square: Atticus -->
-            <a href="atticus.html" class="grid-item large atticus" data-preview="AI SaaS for wealth advisors | 120+ users">
-                <div class="item-content">
-                    <div class="item-icon">
-                        <img src="https://atticuschat.b-cdn.net/black%20transparent%20logo%20only.png" alt="Atticus Chat Logo" style="height: 60px; width: auto;">
-                    </div>
-                    <h2 class="item-title">Atticus Conseil</h2>
-                    <p class="item-preview">AI SaaS for wealth advisors | 120+ users | My own start up</p>
+        <!-- Overview -->
+        <section class="section">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="card">
+                <div class="card-content">
+                    <p>
+                        <strong>Atticus Conseil</strong> is a dual-business model venture combining wealth advisory services
+                        for Wealth Managers with B2B digital transformation solutions for private banks and family offices.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        The flagship product, <strong>Atticus Chat</strong>, is a scalable SaaS platform with AI integration
+                        designed specifically for the French financial markets, targeting CGP advisors, private banking, and HNWI clients.
+                    </p>
                 </div>
-            </a>
+            </div>
+        </section>
 
-            <!-- Medium Square: Experience -->
-            <a href="experience.html" class="grid-item medium experience" data-preview="ETSA Patrimoine • Ministry of Interior • E-commerce Founder">
-                <div class="item-content">
-                    <div class="item-icon">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
+        <!-- Key Metrics -->
+        <section class="section">
+            <h2 class="section-title">Key Metrics</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 2.5rem; color: var(--accent-powder); margin-bottom: 0.5rem;">120+</h3>
+                    <div class="card-content">
+                        <p style="font-size: 1.1rem; font-weight: 500;">Active Users</p>
+                        <p style="font-size: 0.95rem; margin-top: 0.5rem;">Wealth managers and advisors using the platform</p>
                     </div>
-                    <h2 class="item-title">Experience</h2>
-                    <p class="item-preview">ETSA Patrimoine • Ministry of Interior • E-commerce Founder</p>
                 </div>
-            </a>
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 2.5rem; color: var(--cta-sage); margin-bottom: 0.5rem;">2</h3>
+                    <div class="card-content">
+                        <p style="font-size: 1.1rem; font-weight: 500;">Business Verticals</p>
+                        <p style="font-size: 0.95rem; margin-top: 0.5rem;">Advisory services + Technology solutions</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 2.5rem; color: var(--cta-coral); margin-bottom: 0.5rem;">AI</h3>
+                    <div class="card-content">
+                        <p style="font-size: 1.1rem; font-weight: 500;">Proprietary Technology</p>
+                        <p style="font-size: 0.95rem; margin-top: 0.5rem;">Custom AI stack for French wealth management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Medium Square: Projects -->
-            <a href="projects.html" class="grid-item medium projects" data-preview="Financial modeling • Derivatives • Quantitative analysis">
-                <div class="item-content">
-                    <div class="item-icon">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
-                    </div>
-                    <h2 class="item-title">Projects</h2>
-                    <p class="item-preview">Financial modeling • Derivatives • Quantitative analysis</p>
+        <!-- Problem & Solution -->
+        <section class="section">
+            <h2 class="section-title">The Challenge</h2>
+            <div class="card">
+                <div class="card-content">
+                    <p>
+                        <strong>Problem:</strong> French wealth management advisors face increasing regulatory complexity,
+                        time-consuming client reporting, and lack of specialized AI tools adapted to French financial markets
+                        and compliance requirements.
+                    </p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Solution:</strong> Atticus Chat provides automated financial analysis, regulatory compliance tools,
+                        and intelligent client reporting systems specifically designed for the French wealth management ecosystem,
+                        enabling advisors to focus on client relationships while maintaining regulatory excellence.
+                    </p>
                 </div>
-            </a>
+            </div>
+        </section>
 
-            <!-- Medium Square: Activities -->
-            <a href="activities.html" class="grid-item medium activities" data-preview="🤺 Fencing • 🌍 4 continents • 🗣️ FR/EN/CN/JP/ES">
-                <div class="item-content">
-                    <div class="item-icon">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                            <path d="M2 12h20"></path>
-                        </svg>
+        <!-- Product Features -->
+        <section class="section">
+            <h2 class="section-title">Platform Capabilities</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 class="card-title">Automated Financial Analysis</h3>
+                    <div class="card-content">
+                        <p>AI-powered analysis of investment portfolios, risk assessment, and performance reporting tailored to French market regulations.</p>
                     </div>
-                    <h2 class="item-title">Activities</h2>
-                    <p class="item-preview">🤺 Fencing • 🌍 4 continents • 🗣️ FR/EN/CN/JP/ES</p>
                 </div>
-            </a>
+                <div class="card">
+                    <h3 class="card-title">Regulatory Compliance</h3>
+                    <div class="card-content">
+                        <p>Automated compliance checking and documentation aligned with French financial regulations and AMF requirements.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Client Reporting Systems</h3>
+                    <div class="card-content">
+                        <p>Streamlined client communication tools with professional reporting templates and automated updates.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Digital Transformation</h3>
+                    <div class="card-content">
+                        <p>End-to-end digitalization solutions for private banks and family offices seeking to modernize their operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Small Square: Connect -->
-            <a href="connect.html" class="grid-item small connect" data-preview="Get in touch">
-                <div class="item-content">
-                    <div class="item-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
+        <!-- Business Development -->
+        <section class="section">
+            <h2 class="section-title">Business Development</h2>
+            <ul class="info-list">
+                <li>
+                    <strong>Market Analysis to Launch:</strong> Executed comprehensive end-to-end business development from initial market research
+                    to full product launch
+                </li>
+                <li>
+                    <strong>Beta Program Management:</strong> Successfully onboarded 120+ users through structured beta testing and feedback integration
+                </li>
+                <li>
+                    <strong>Revenue Diversification:</strong> Developed dual revenue streams across advisory services and technology licensing
+                </li>
+                <li>
+                    <strong>Client Acquisition Strategy:</strong> Built targeted outreach programs for CGP advisors, private banks, and HNWI segments
+                </li>
+            </ul>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="section">
+            <h2 class="section-title">Technology</h2>
+            <div class="card">
+                <div class="card-content">
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Proprietary AI Technology Stack</strong> built specifically for French financial markets:
+                    </p>
+                    <div class="skills-grid" style="margin-top: 1rem;">
+                        <div class="skill-tag">Natural Language Processing</div>
+                        <div class="skill-tag">Financial Data Analysis</div>
+                        <div class="skill-tag">Regulatory Compliance AI</div>
+                        <div class="skill-tag">SaaS Platform Architecture</div>
+                        <div class="skill-tag">French Market Specialization</div>
+                        <div class="skill-tag">Secure Client Data Management</div>
                     </div>
-                    <h2 class="item-title">Connect</h2>
-                    <p class="item-preview">Get in touch</p>
                 </div>
-            </a>
-        </main>
+            </div>
+        </section>
+
+        <!-- Target Market -->
+        <section class="section">
+            <h2 class="section-title">Target Markets</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 class="card-title">CGP Advisors</h3>
+                    <div class="card-content">
+                        <p>Independent wealth management advisors (Conseillers en Gestion de Patrimoine) seeking digital tools and efficiency gains.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Private Banking</h3>
+                    <div class="card-content">
+                        <p>Private banks looking to enhance their digital capabilities and streamline client service operations.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Family Offices</h3>
+                    <div class="card-content">
+                        <p>High-net-worth individual (HNWI) family offices requiring sophisticated wealth management technology solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Demo -->
+        <section class="section">
+            <h2 class="section-title">Platform Demo</h2>
+            <div class="card" style="padding: 2rem; background: var(--bg-gray-blue);">
+                <div class="card-content">
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-dark);">
+                        <strong>Atticus Chat</strong> provides AI-powered investment strategy recommendations tailored to French wealth management regulations.
+                        The platform features automated portfolio analysis, asset allocation suggestions, and comprehensive client reporting tools.
+                    </p>
+
+                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(44, 62, 80, 0.2); margin-bottom: 1.5rem;">
+                        <img src="https://atticuschat.b-cdn.net/Screenshot%202025-10-23%20at%2010.27.58.png" alt="Atticus Chat Platform Demo - Investment Strategy Interface" style="width: 100%; height: auto; display: block;">
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="https://www.atticuschat.com" target="_blank" rel="noopener noreferrer" class="cta-button" style="background: var(--cta-sage); display: inline-flex;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Visit Atticus Chat
+                        </a>
+                        <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--primary-slate);">
+                            Experience the platform live at <a href="https://www.atticuschat.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-powder); text-decoration: none; font-weight: 500;">www.atticuschat.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script src="js/main.js"></script>
